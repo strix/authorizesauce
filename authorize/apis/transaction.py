@@ -109,6 +109,7 @@ class TransactionAPI(object):
         if address:
             params.update({
                 'x_address': address.street,
+                'x_company': address.company,
                 'x_city': address.city,
                 'x_state': address.state,
                 'x_zip': address.zip_code,

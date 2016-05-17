@@ -103,14 +103,15 @@ class Address(object):
     Represents a billing address for a charge. Pass in the street, city, state
     and zip code, and optionally country for the address.
     """
-    def __init__(self, street=None, city=None, state=None, zip_code=None,
+    def __init__(self, street=None, company=None, city=None, state=None, zip_code=None,
             country='US'):
         self.street = street
+        self.company = company
         self.city = city
         self.state = state
         self.zip_code = zip_code
         self.country = country
 
     def __repr__(self):
-        return '<Address {0.street}, {0.city}, {0.state} {0.zip_code}>' \
+        return '<Address {0.street}, {0.company}, {0.city}, {0.state} {0.zip_code}>' \
             .format(self)
